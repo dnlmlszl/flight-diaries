@@ -1,4 +1,4 @@
-import diaries from '../data/diaryEntries';
+import diaries from '../../data/diaryEntries';
 
 import { DiaryEntry, NonSensitiveDiaryEntry, NewDiaryEntry } from '../types';
 

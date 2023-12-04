@@ -1,9 +1,4 @@
-import {
-  NewDiaryEntry,
-  NewDiaryEntryObject,
-  Visibility,
-  Weather,
-} from './types';
+import { NewDiaryEntry, Visibility, Weather } from './types';
 
 const isString = (text: unknown): text is string => {
   return typeof text === 'string' || text instanceof String;
@@ -55,7 +50,7 @@ const parseVisibility = (visibility: unknown): Visibility => {
   return visibility;
 };
 
-const toNewDiaryEntry = (object: NewDiaryEntryObject): NewDiaryEntry => {
+const toNewDiaryEntry = (object: unknown): NewDiaryEntry => {
   if (!object || typeof object !== 'object' || object === null) {
     throw new Error('Incorrect or missing object');
   }
